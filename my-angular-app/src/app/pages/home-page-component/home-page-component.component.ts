@@ -36,28 +36,28 @@ export class HomePageComponentComponent {
       description: 'Powerful smartphone with great features',
       price: 499.99,
       rating: 4.5,
-      image: 'https://via.placeholder.com/200x150?text=Phone'
+      image: 'https://m.media-amazon.com/images/I/41gPGB5fW3L._SR480,440_.jpg'
     },
     {
       name: 'Bluetooth Headphones',
       description: 'Noise-cancelling over-ear headphones',
       price: 99.99,
       rating: 4.7,
-      image: 'https://via.placeholder.com/200x150?text=Headphones'
+      image: 'https://m.media-amazon.com/images/I/71OfjnWAdoL._AC_SR160,134_CB1169409_QL70_.jpg'
     },
     {
       name: 'Men’s Jacket',
       description: 'Stylish winter jacket',
       price: 79.99,
       rating: 4.2,
-      image: 'https://via.placeholder.com/200x150?text=Jacket'
+      image: 'https://m.media-amazon.com/images/I/61TCD6RdWXL._AC_SR160,134_CB1169409_QL70_.jpg'
     },
     {
       name: 'LED TV 42"',
       description: 'Smart TV with crisp display',
       price: 299.99,
       rating: 4.6,
-      image: 'https://via.placeholder.com/200x150?text=TV'
+      image: 'https://m.media-amazon.com/images/I/81XdceRvZaL._AC_UY218_.jpg'
     }
   ];
 
