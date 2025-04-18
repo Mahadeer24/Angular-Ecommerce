@@ -5,7 +5,7 @@
         <div class="user-actions">
             <span>Hello, {{ username }}</span>
             <button (click)="logout()">Logout</button>
-            <span class="cart">🛒 ({{ cart.length }})</span>
+            <span class="cart" (click)="goToProductList()">🛒 ({{ cart.length }})</span>
         </div>
     </header>
 

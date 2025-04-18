@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page-component',
@@ -60,6 +61,8 @@ export class HomePageComponentComponent {
     }
   ];
 
+  constructor(private router: Router) {}
+
   ngOnInit(): void {
     setInterval(() => this.nextSlide(), 5000);
   }
@@ -85,5 +88,9 @@ export class HomePageComponentComponent {
 
   logout() {
     console.log('Logging out...');
+  }
+
+  goToProductList() {
+    this.router.navigate(['/cart']);
   }
 }
