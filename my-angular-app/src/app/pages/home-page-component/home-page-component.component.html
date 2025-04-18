@@ -1,1 +1,44 @@
-<p>home-page-component works!</p>
+<div class="home-page-container">
+    <header class="top-header">
+        <div class="logo">ShopEasy</div>
+        <input type="text" placeholder="Search for products..." [(ngModel)]="searchTerm" />
+        <div class="user-actions">
+            <span>Hello, {{ username }}</span>
+            <button (click)="logout()">Logout</button>
+            <span class="cart">🛒 ({{ cart.length }})</span>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <img [src]="carouselImages[currentSlide]" class="carousel-img" alt="Promo" />
+        <button class="nav left" (click)="prevSlide()">❮</button>
+        <button class="nav right" (click)="nextSlide()">❯</button>
+    </div>
+
+    <!-- Categories -->
+    <section class="category-banners">
+        <div class="category" *ngFor="let category of categories">
+            <img [src]="category.image" alt="{{ category.name }}" />
+            <p>{{ category.name }}</p>
+        </div>
+    </section>
+
+    <!-- Product List -->
+    <section class="product-section">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card" *ngFor="let product of filteredProducts()">
+                <img [src]="product.image" alt="{{ product.name }}" />
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <div class="bottom-row">
+                    <span class="price">${{ product.price }}</span>
+                    <span class="rating">⭐ {{ product.rating }}</span>
+                </div>
+                <button (click)="addToCart(product)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+</div>
+  
